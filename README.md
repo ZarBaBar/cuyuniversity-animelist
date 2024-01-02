@@ -1,4 +1,4 @@
-Bismillahirrahmanirahim 
+# Bismillahirrahmanirahim 
 Saya memulai project ini pada tanggal 30 Desember 2023
 Project ini berisi list atau kumpulan-kumpulan anime
 Project ini menggunakan teknologi :
