@@ -4,17 +4,15 @@ import AnimeList from "@/components/AnimeList";
 import React, { useEffect, useState } from "react";
 const { default: HeaderMenu } = require("@/components/utilities/HeaderMenu");
 const { default: Pagination } = require("@/components/utilities/Pagination");
+import { getAnimeResponse } from "../libs/api-libs";
 
 const Page = () => {
   const [page, setPage] = useState(1);
   const [topAnime, setTopAnime] = useState([]);
 
   const fetchData = async () => {
-    const respone = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?page=${page}`
-    );
-    const data = await respone.json();
-    setTopAnime(data);
+    const populerAnime = await getAnimeResponse("top/anime", `page=${page}`);
+    setTopAnime(populerAnime);
   };
 
   useEffect(() => {
