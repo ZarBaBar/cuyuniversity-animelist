@@ -1,4 +1,4 @@
-import { getAnimeResponse } from "@/app/libs/api-libs";
+import { getAnimeResponse } from "@/libs/api-libs";
 import VideoPlayer from "@/components/utilities/VideoPlayer";
 import Image from "next/image";
 
@@ -38,9 +38,6 @@ const Page = async ({ params: { id } }) => {
           <h3>RATING</h3>
           <p>{anime.data.rating}</p>
         </div>
-        <div>
-          <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
-        </div>
       </div>
       <div className="pt-4 px-4 flex sm:flex-nowrap flex-wrap gap-2 text-color-primary">
         <Image
@@ -51,6 +48,9 @@ const Page = async ({ params: { id } }) => {
           className="w-full rounded object-cover"
         />
         <p className="text-color-primary text-xl">{anime.data.synopsis}</p>
+      </div>
+      <div>
+        <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
       </div>
     </>
   );

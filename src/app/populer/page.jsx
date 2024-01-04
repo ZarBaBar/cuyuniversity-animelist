@@ -4,7 +4,7 @@ import AnimeList from "@/components/AnimeList";
 import React, { useEffect, useState } from "react";
 const { default: HeaderMenu } = require("@/components/utilities/HeaderMenu");
 const { default: Pagination } = require("@/components/utilities/Pagination");
-import { getAnimeResponse } from "../libs/api-libs";
+import { getAnimeResponse } from "../../libs/api-libs";
 
 const Page = () => {
   const [page, setPage] = useState(1);
